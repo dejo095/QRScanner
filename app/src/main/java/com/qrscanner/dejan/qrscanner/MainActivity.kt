@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         btn_scan.setOnClickListener {
 
             val scanner = IntentIntegrator(this)
+            scanner.setOrientationLocked(true)
 //            scanner.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE) // allows only QR to be scanned
             scanner.setBeepEnabled(false) // disables beep
             scanner.initiateScan() // returns result on ActivityResult method
